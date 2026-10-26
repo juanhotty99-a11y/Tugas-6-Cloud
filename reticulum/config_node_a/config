@@ -1,0 +1,18 @@
+# Konfigurasi Reticulum untuk Node A (pengirim)
+# Node A terhubung ke TCP server milik Node B.
+# Jika Node B berada di komputer lain, ganti target_host dengan IP Node B.
+
+[reticulum]
+  enable_transport = False
+  share_instance = No
+  panic_on_interface_error = No
+
+[logging]
+  loglevel = 4
+
+[interfaces]
+  [[TCP Client ke Node B]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = 127.0.0.1
+    target_port = 4242

@@ -1,0 +1,5 @@
+# Data runtime Reticulum (berisi private key, jangan di-commit)
+reticulum/config_node_*/storage/
+reticulum/config_node_*/identity_node_*
+reticulum/config_node_*/logfile*
+__pycache__/

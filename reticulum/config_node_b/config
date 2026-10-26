@@ -1,0 +1,17 @@
+# Konfigurasi Reticulum untuk Node B (penerima)
+# Node B membuka TCP server sehingga Node A bisa terhubung ke sini.
+
+[reticulum]
+  enable_transport = False
+  share_instance = No
+  panic_on_interface_error = No
+
+[logging]
+  loglevel = 4
+
+[interfaces]
+  [[TCP Server Node B]]
+    type = TCPServerInterface
+    enabled = yes
+    listen_ip = 127.0.0.1
+    listen_port = 4242
